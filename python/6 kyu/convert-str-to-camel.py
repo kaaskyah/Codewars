@@ -18,8 +18,9 @@ text = "the-stealth_warrior"
 def to_camel_case(text):
     text = text.replace('_', '-')
     arr = text.split('-')
-    for i in arr:
-    return arr
+    for i in range(1, len(arr)):
+        arr[i] = arr[i].capitalize()
+    return ''.join(arr)
 
 
 print(to_camel_case(text))
